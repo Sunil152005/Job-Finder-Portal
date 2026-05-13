@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>Post a Job</title>
+<link rel="stylesheet" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+<nav class="navbar">
+  <div class="logo">Job Finder</div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="postJob.html" class="active">Post a Job</a></li>
+    <li><a href="postWork.html">Post a Work</a></li>
+  </ul>
+</nav>
+</header>
+
+<section class="form-section">
+<div class="form-card">
+<h2>Post a Job</h2>
+<p>Fill in the details below to post your job and reach skilled local workers.</p>
+<form id="jobForm">
+  <input type="text" name="title" placeholder="Job Title" required>
+  <input type="text" name="description" placeholder="Job Description" required>
+  <div class="location-input-group">
+    <input type="text" id="jobLocation" name="location" placeholder="Location" required>
+    <button type="button" class="btn-gps" onclick="getCurrentLocation('jobLocation')">Use GPS</button>
+  </div>
+  <input type="text" name="salary" placeholder="Salary" required>
+  <input type="text" name="contact" placeholder="Contact Number" required>
+  <button type="submit" class="btn primary">Submit Job</button>
+</form>
+</div>
+</section>
+
+<section class="list-section">
+<h2>Available Workers</h2>
+<div id="workersList" class="features">
+  </div>
+</section>
+
+<footer>
+<p>© 2025 Local Employee Job Finder | College Project</p>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

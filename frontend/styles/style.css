@@ -1,0 +1,557 @@
+/* General */
+body
+{
+  font-family:'Poppins', sans-serif;
+  background:#f5f7fa;
+  color:#333;
+  margin:0;
+  padding:0;
+}
+header 
+{
+  background:#1e3a8a;
+  color:white;
+  padding:1rem 2rem;
+}
+.navbar ul 
+{
+  list-style:none;
+  display:flex;
+  gap:1.5rem;
+  justify-content:flex-end;
+  margin:0;
+}
+.navbar .logo
+{
+  font-weight:700;
+  font-size:1.5rem;
+  color:#facc15;
+  float:left;
+}
+.navbar a
+{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+.navbar a.active, .navbar a:hover
+{
+  border-bottom: 2px solid #facc15;
+}
+
+/* Hero */
+.hero 
+{
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: 0 0 50% 50%;
+}
+.hero-content h1 
+{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p 
+{
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero-buttons a 
+{
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Buttons */
+.btn.primary { background:#fff; color: #2563eb; }
+.btn.primary:hover { background:#2563eb; color: #fff;; }
+.btn.secondary { background:#fff; color: #2563eb; border: 2px solid #2563eb; }
+.btn.secondary:hover { background:#2563eb; color: #fff; }
+
+/* Forms */
+.form-section
+{
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+  padding: 3rem 1rem;
+}
+.form-card
+{
+  max-width:500px;
+  margin:auto;
+  background:#fff;
+  border-radius:12px;
+  padding:2rem;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+  text-align:center;
+} 
+
+.form-card h2 { margin-bottom: 0.5rem; }
+.form-card p { margin-bottom: 1.5rem; color: #555; }
+form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form input { padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; }
+form button { cursor: pointer; }
+
+/* Cards */
+.features 
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+.feature-card
+{
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 250px;
+  transition: 0.3s;
+}
+.feature-card:hover
+{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.card-icon
+{
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: white;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+footer
+{
+  text-align: center;
+  padding: 1rem;
+  background: #1e3a8a;
+  color: white;
+}
+
+/* Location Input with GPS Button */
+.location-input-group 
+{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.location-input-group input 
+{
+  flex-grow: 1; 
+}
+
+.btn-gps 
+{
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  background: #eef2ff;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.btn-gps:hover 
+{
+  background: #dbeafe;
+}
+
+/* Auth form switcher link */
+.auth-switch 
+{
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.auth-container 
+{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.auth-container .form-card 
+{
+  flex: 1 1 400px; 
+  max-width: 450px;
+  margin: 0; 
+}
+
+/*Message Box */
+.btn-contact 
+{
+  background: #eef2ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.btn-contact:hover 
+{
+  background: #dbeafe;
+}
+
+.contact-info-box 
+{
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f5f7fa;
+  border: 1px solid #eef2ff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-info-box strong 
+{
+  color: #1e3a8a;
+}
+
+.hidden-form 
+{
+  display: none;
+}
+
+/* REPLACE the old password CSS with this code 
+  in your styles/style.css file.
+*/
+
+/* 1. This wrapper holds the input and the icon.
+     It makes the whole group as wide as the Email/Name fields.
+*/
+.password-wrapper {
+    position: relative;
+    width: 100%; 
+    
+    /* If your other inputs have margin-bottom, add it here */
+    /* e.g., margin-bottom: 15px; */
+}
+
+/* 2. This styles the password input field INSIDE the wrapper.
+*/
+.password-wrapper input {
+    width: 100%; /* Makes the password box fill the wrapper */
+    
+    /* This is important! It makes the padding stay INSIDE the box,
+      not add to its width.
+    */
+    box-sizing: border-box; 
+
+    /* This adds space on the right side FOR the icon */
+    padding-right: 45px; 
+    
+    /* IMPORTANT:
+      You must copy the other styles from your 'input[type="email"]'
+      (like padding-left, height, border, font-size, border-radius)
+      and paste them here so it matches perfectly.
+    */
+}
+
+/* 3. This positions the icon INSIDE the wrapper.
+*/
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* 15px from the right edge */
+    transform: translateY(-50%); /* Centers it vertically */
+    cursor: pointer;
+    color: #888;
+}
+
+/* Add this to your style.css to hide the browser's default "eye" */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-password-reveal-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/* --- Contact Us Section --- */
+
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa; /* A very light grey, like your feature boxes */
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.2rem; /* A good size for the title */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+    text-align: left; /* Align form labels to the left */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* This styles all the input fields and the textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif; /* Use your site's font */
+    box-sizing: border-box; /* Correct box sizing */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resize only */
+    min-height: 120px;
+}
+
+/* Make sure your .btn.primary class exists. 
+   This should style the button just like your Register button.
+   If it doesn't, you may need to copy the styles from your auth page.
+   This is a good fallback:
+*/
+.contact-form .btn.primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0d6efd; /* Main blue color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn.primary:hover {
+    background-color: #0b5ed7; /* Darker blue */
+}
+
+/* --- ADD THIS TO THE END OF styles/style.css --- */
+
+/* This styles the container on profile.html */
+.profile-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* This centers the content in the light grey area if it's not already */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Light grey background for the page */
+    min-height: 80vh; /* Make sure it fills the screen */
+}
+
+/* This is the main card, like your screenshot */
+.profile-card-large {
+    max-width: 450px;
+    width: 90%; /* Responsive width */
+    margin: 0 auto 40px auto; /* Center it and add space below */
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content */
+    text-align: center;
+}
+
+/* This is the circular avatar */
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #0d6efd; /* Your main blue color */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem; /* For the initial */
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 3px solid #fff; /* White border like Google's */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.profile-info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #212529;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    color: #6c757d; /* A light grey */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    font-size: 0.9rem;
+    color: #495057;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.profile-actions {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* This styles the new "Sign Out" button */
+.btn-logout-profile {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #dc3545; /* Red border */
+    color: #dc3545; /* Red text */
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout-profile i {
+    margin-right: 8px;
+}
+
+.btn-logout-profile:hover {
+    background-color: #dc3545; /* Red fill on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Styles for the job/work lists below the card */
+.jobs-list, .workers-list {
+    max-width: 800px;
+    width: 90%; /* Responsive width */
+    margin: 0 auto;
+}
+
+.jobs-list h3, .workers-list h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* This is the error message class from your JS */
+.error-msg {
+    color: #dc3545;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* --- CSS FOR ROLE SELECTOR --- */
+
+.role-selector {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.role-selector > label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.role-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Hide the actual radio button */
+.role-options input[type="radio"] {
+    display: none;
+}
+
+.role-options .role-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.role-options .role-label i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+.role-options .role-label span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+/* Style for the selected option */
+.role-options input[type="radio"]:checked + .role-label {
+    border-color: #0d6efd; /* Your main blue color */
+    background-color: #f0f6ff; /* A light blue tint */
+}
+.role-options input[type="radio"]:checked + .role-label i,
+.role-options input[type="radio"]:checked + .role-label span {
+    color: #0d6efd;
+}

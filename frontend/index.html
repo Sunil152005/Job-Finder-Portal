@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Employee Job Finder</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+<nav class="navbar">
+  <div class="logo">Job Finder</div>
+  <ul id="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="postJob.html">Post a Job</a></li>
+    <li><a href="postWork.html">Post a Work</a></li>
+  </ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Connecting Local Employers & Skilled Workers</h1>
+<p>Find jobs and workers nearby quickly and easily.</p>
+<div class="hero-buttons">
+<a href="postJob.html" class="btn primary">Post a Job</a>
+<a href="postWork.html" class="btn secondary">Find a Job</a>
+</div>
+</div>
+</section>
+
+<section class="features">
+<div class="feature-card">
+  <div class="card-icon"><i class="fas fa-street-view fa-2x"></i></div>
+  <h2>GPS Location</h2>
+  <p>Use your device's GPS to pinpoint your location instantly.</p>
+</div>
+<div class="feature-card">
+  <div class="card-icon"><i class="fas fa-user-lock fa-2x"></i></div>
+  <h2>User Accounts</h2>
+  <p>Register and log in to manage your posts and information easily.</p>
+</div>
+<div class="feature-card">
+  <div class="card-icon"><i class="fas fa-map-marked-alt fa-2x"></i></div>
+  <h2>Interactive Maps</h2>
+  <p>Click on any location to view it directly on Google Maps.</p>
+</div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have a question or feedback? We'd love to hear from you.</p>
+        
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" name="name" placeholder="Full Name" required
+                 pattern="[a-zA-Z ]+" 
+                 title="Please enter letters and spaces only.">
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="6" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Local Employee Job Finder | College Project</p>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

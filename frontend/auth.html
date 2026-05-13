@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register & Login</title>
+<link rel="stylesheet" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+  <div class="logo">Job Finder</div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="postJob.html">Post a Job</a></li>
+    <li><a href="postWork.html">Post a Work</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="form-section">
+<div class="form-card">
+
+  <form id="registerForm">
+    <h2>Register</h2>
+    <p>Create an account to get started.</p>
+
+    <!-- START: NEW USER TYPE SELECTION -->
+    <div class="form-group-radio">
+        <label>Register as:</label>
+        <div class="radio-options">
+            <label for="type_poster">
+                <input type="radio" id="type_poster" name="userType" value="poster" checked> Job Poster
+            </label>
+            <label for="type_worker">
+                <input type="radio" id="type_worker" name="userType" value="worker"> Worker
+            </label>
+        </div>
+    </div>
+    <!-- END: NEW USER TYPE SELECTION -->
+
+    <input type="text" name="name" placeholder="Full Name" required 
+       pattern="[a-zA-Z ]+" 
+       title="Please enter letters and spaces only.">
+    <input type="email" name="email" placeholder="Email Address" required>
+    <div class="password-wrapper">
+      <input type="password" name="password" id="registerPassword" placeholder="Password" minlength="6" required>
+      <i class="fas fa-eye toggle-password"></i>
+    </div>
+    <button type="submit" class="btn primary">Register</button>
+  </form>
+  
+  <form id="loginForm" class="hidden-form">
+    <h2>Login</h2>
+    <p>Access your account to manage your posts.</p>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <div class="password-wrapper">
+      <input type="password" name="password" id="loginPassword" placeholder="Password" required>
+      <i class="fas fa-eye toggle-password"></i>
+    </div>
+    <button type="submit" class="btn primary">Login</button>
+  </form>
+
+  <p class="auth-switch">
+    <span id="switchToLogin">Already have an account? <a href="#">Login here</a></span>
+    <span id="switchToRegister" class="hidden-form">Don't have an account? <a href="#">Register here</a></span>
+  </p>
+
+</div>
+</section>
+
+<footer>
+  <p>© 2025 Local Employee Job Finder | College Project</p>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
